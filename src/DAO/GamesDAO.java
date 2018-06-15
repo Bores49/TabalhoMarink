@@ -33,14 +33,12 @@ public class GamesDAO {
     public void cadastrarGames(Games obj){
     
         try {
-            String cmdsql = "insert into games(nome, genero, plataforma, tamanho, fabricante)values (?,?,?,?,?)";
+            String cmdsql = "insert into games(nome,tamanho)values (?,?)";
             
             PreparedStatement stmt = conecta.prepareStatement(cmdsql);
             stmt.setString(1, obj.getNome());
-            stmt.setString(2, obj.getGenero());
-            stmt.setString(3, obj.getPlataforma());
-            stmt.setDouble(4,obj.getTamanho());
-            stmt.setString(5, obj.getFabricante());
+            stmt.setDouble(2,obj.getTamanho());
+            
             
             
             //executa

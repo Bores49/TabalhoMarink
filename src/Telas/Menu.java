@@ -5,8 +5,14 @@
  */
 package Telas;
 
+import DAO.FabricantesDAO;
 import DAO.GamesDAO;
+import DAO.GenerosDAO;
+import DAO.PlataformaDAO;
+import javabens.Fabricante;
 import javabens.Games;
+import javabens.Genero;
+import javabens.Plataforma;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
@@ -48,14 +54,16 @@ public class Menu extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         idade = new javax.swing.JLabel();
         jrbM = new javax.swing.JRadioButton();
+        jDesktopPane2 = new javax.swing.JDesktopPane();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
+        jDesktopPane3 = new javax.swing.JDesktopPane();
+        jLabel8 = new javax.swing.JLabel();
+        codigo1 = new javax.swing.JLabel();
+        txtCodigo1 = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtTamanho = new javax.swing.JTextField();
+        txtNome = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        txtFabricante = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         rbRPG = new javax.swing.JRadioButton();
         rbMOBA = new javax.swing.JRadioButton();
@@ -65,26 +73,27 @@ public class Menu extends javax.swing.JFrame {
         rbCorrida = new javax.swing.JRadioButton();
         rbAcao = new javax.swing.JRadioButton();
         rbEsportes = new javax.swing.JRadioButton();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         cxPC = new javax.swing.JCheckBox();
         cxXboxOne = new javax.swing.JCheckBox();
         cxXboxOneS = new javax.swing.JCheckBox();
         cxPS4 = new javax.swing.JCheckBox();
         cxPS4Pro = new javax.swing.JCheckBox();
-        txtNome = new javax.swing.JTextField();
-        codigo1 = new javax.swing.JLabel();
-        txtCodigo1 = new javax.swing.JTextField();
-        btnNovo1 = new javax.swing.JButton();
-        btnSalvar1 = new javax.swing.JButton();
-        jLabel8 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtTamanho = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        txtFabricante = new javax.swing.JTextField();
+        btnSalvar1 = new javax.swing.JButton();
+        btnNovo1 = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tabela = new javax.swing.JTable();
         jLabel9 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLayeredPane1 = new javax.swing.JLayeredPane();
+        jDesktopPane4 = new javax.swing.JDesktopPane();
 
         jpIdade1.setBackground(new java.awt.Color(255, 255, 255));
         jpIdade1.setBorder(new javax.swing.border.MatteBorder(null));
@@ -205,43 +214,63 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        jDesktopPane2.setBackground(new java.awt.Color(0, 255, 204));
+        jDesktopPane2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(153, 153, 153));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jDesktopPane3.setBackground(new java.awt.Color(51, 255, 204));
+        jDesktopPane3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
+        jLabel8.setText("Cadastro de Games");
+        jDesktopPane3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, -1, -1));
+
+        codigo1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        codigo1.setText("Codigo:");
+        jDesktopPane3.add(codigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 83, -1, -1));
+
+        txtCodigo1.setEditable(false);
+        txtCodigo1.setText("*********");
+        jDesktopPane3.add(txtCodigo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 83, 84, -1));
+
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel3.setText("Nome:");
+        jDesktopPane3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 133, -1, -1));
 
-        txtTamanho.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtNome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeActionPerformed(evt);
+            }
+        });
+        jDesktopPane3.add(txtNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 153, 180, -1));
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel4.setText("Genero:");
+        jDesktopPane3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 193, -1, -1));
 
-        txtFabricante.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("Plataforma:");
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("Tamanho:");
-
-        jPanel3.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setForeground(new java.awt.Color(204, 204, 204));
 
-        rbRPG.setBackground(new java.awt.Color(204, 204, 204));
+        rbRPG.setBackground(new java.awt.Color(255, 255, 255));
         rbRPG.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbRPG.setText("RPG");
 
-        rbMOBA.setBackground(new java.awt.Color(204, 204, 204));
+        rbMOBA.setBackground(new java.awt.Color(255, 255, 255));
         rbMOBA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbMOBA.setText("MOBA");
 
-        rbMMORPG.setBackground(new java.awt.Color(204, 204, 204));
+        rbMMORPG.setBackground(new java.awt.Color(255, 255, 255));
         rbMMORPG.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbMMORPG.setText("MMORPG");
 
-        rbEstrategia.setBackground(new java.awt.Color(204, 204, 204));
+        rbEstrategia.setBackground(new java.awt.Color(255, 255, 255));
         rbEstrategia.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbEstrategia.setText("Estrategia");
         rbEstrategia.addActionListener(new java.awt.event.ActionListener() {
@@ -250,7 +279,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        rbAventura.setBackground(new java.awt.Color(204, 204, 204));
+        rbAventura.setBackground(new java.awt.Color(255, 255, 255));
         rbAventura.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbAventura.setText("Aventura");
         rbAventura.addActionListener(new java.awt.event.ActionListener() {
@@ -259,15 +288,15 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        rbCorrida.setBackground(new java.awt.Color(204, 204, 204));
+        rbCorrida.setBackground(new java.awt.Color(255, 255, 255));
         rbCorrida.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbCorrida.setText("Corrida");
 
-        rbAcao.setBackground(new java.awt.Color(204, 204, 204));
+        rbAcao.setBackground(new java.awt.Color(255, 255, 255));
         rbAcao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbAcao.setText("Ação");
 
-        rbEsportes.setBackground(new java.awt.Color(204, 204, 204));
+        rbEsportes.setBackground(new java.awt.Color(255, 255, 255));
         rbEsportes.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbEsportes.setText("Esporte");
 
@@ -314,17 +343,19 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel7.setText("Fabricante:");
+        jDesktopPane3.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 212, -1, -1));
 
-        jPanel4.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setText("Plataforma:");
+        jDesktopPane3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 333, -1, -1));
 
-        cxPC.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        cxPC.setBackground(new java.awt.Color(255, 255, 255));
         cxPC.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cxPC.setText("PC");
 
-        cxXboxOne.setBackground(new java.awt.Color(204, 204, 204));
+        cxXboxOne.setBackground(new java.awt.Color(255, 255, 255));
         cxXboxOne.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cxXboxOne.setText("Xbox One");
         cxXboxOne.addActionListener(new java.awt.event.ActionListener() {
@@ -333,15 +364,15 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        cxXboxOneS.setBackground(new java.awt.Color(204, 204, 204));
+        cxXboxOneS.setBackground(new java.awt.Color(255, 255, 255));
         cxXboxOneS.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cxXboxOneS.setText("Xbox one X");
 
-        cxPS4.setBackground(new java.awt.Color(204, 204, 204));
+        cxPS4.setBackground(new java.awt.Color(255, 255, 255));
         cxPS4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cxPS4.setText("PS4");
 
-        cxPS4Pro.setBackground(new java.awt.Color(204, 204, 204));
+        cxPS4Pro.setBackground(new java.awt.Color(255, 255, 255));
         cxPS4Pro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cxPS4Pro.setText("PS4 Pro");
         cxPS4Pro.addActionListener(new java.awt.event.ActionListener() {
@@ -380,27 +411,25 @@ public class Menu extends javax.swing.JFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        txtNome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtNome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomeActionPerformed(evt);
-            }
-        });
+        jDesktopPane3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 353, 480, -1));
 
-        codigo1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        codigo1.setText("Codigo:");
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setText("Tamanho:");
+        jDesktopPane3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 453, -1, -1));
 
-        txtCodigo1.setEditable(false);
-        txtCodigo1.setText("*********");
+        txtTamanho.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jDesktopPane3.add(txtTamanho, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 453, 90, -1));
 
-        btnNovo1.setBackground(new java.awt.Color(153, 153, 153));
-        btnNovo1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnNovo1.setText("Novo");
-        btnNovo1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNovo1ActionPerformed(evt);
-            }
-        });
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setText("GB");
+        jDesktopPane3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 456, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setText("Fabricante:");
+        jDesktopPane3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 483, -1, -1));
+
+        txtFabricante.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jDesktopPane3.add(txtFabricante, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 483, 140, -1));
 
         btnSalvar1.setBackground(new java.awt.Color(153, 153, 153));
         btnSalvar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
@@ -410,101 +439,19 @@ public class Menu extends javax.swing.JFrame {
                 btnSalvar1ActionPerformed(evt);
             }
         });
+        jDesktopPane3.add(btnSalvar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(183, 553, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
-        jLabel8.setText("Cadastro de Games");
+        btnNovo1.setBackground(new java.awt.Color(153, 153, 153));
+        btnNovo1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnNovo1.setText("Novo");
+        btnNovo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovo1ActionPerformed(evt);
+            }
+        });
+        jDesktopPane3.add(btnNovo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(293, 553, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel10.setText("GB");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(jLabel8))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(codigo1)
-                        .addGap(26, 26, 26)
-                        .addComponent(txtCodigo1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel5))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel6)
-                        .addGap(10, 10, 10)
-                        .addComponent(txtTamanho, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel10))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel7)
-                        .addGap(3, 3, 3)
-                        .addComponent(txtFabricante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(btnSalvar1)
-                        .addGap(35, 35, 35)
-                        .addComponent(btnNovo1)))
-                .addContainerGap(35, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(jLabel8)
-                .addGap(24, 24, 24)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(codigo1)
-                    .addComponent(txtCodigo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(jLabel3)
-                .addGap(3, 3, 3)
-                .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(jLabel4)
-                .addGap(2, 2, 2)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
-                .addGap(3, 3, 3)
-                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(txtTamanho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel10)))
-                .addGap(7, 7, 7)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel7)
-                    .addComponent(txtFabricante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSalvar1)
-                    .addComponent(btnNovo1))
-                .addContainerGap(117, Short.MAX_VALUE))
-        );
+        jPanel1.add(jDesktopPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 570, 620));
 
         jTabbedPane1.addTab("Cadastro", jPanel1);
 
@@ -553,7 +500,7 @@ public class Menu extends javax.swing.JFrame {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(65, 65, 65)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(408, Short.MAX_VALUE))
+                .addContainerGap(318, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Listar", jPanel2);
@@ -566,12 +513,16 @@ public class Menu extends javax.swing.JFrame {
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 692, Short.MAX_VALUE)
+            .addGap(0, 602, Short.MAX_VALUE)
         );
 
         jTabbedPane1.addTab("tab3", jLayeredPane1);
 
-        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 720));
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, 630));
+
+        jDesktopPane4.setBackground(new java.awt.Color(51, 255, 204));
+        jDesktopPane4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().add(jDesktopPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
         setLocationRelativeTo(null);
@@ -602,25 +553,9 @@ public class Menu extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jrbMActionPerformed
 
-    private void rbEstrategiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbEstrategiaActionPerformed
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_rbEstrategiaActionPerformed
-
-    private void rbAventuraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbAventuraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbAventuraActionPerformed
-
-    private void cxXboxOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cxXboxOneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cxXboxOneActionPerformed
-
-    private void cxPS4ProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cxPS4ProActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cxPS4ProActionPerformed
-
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomeActionPerformed
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void btnNovo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovo1ActionPerformed
         // botao novo
@@ -642,13 +577,12 @@ public class Menu extends javax.swing.JFrame {
         this.txtTamanho.setText("");
         this.txtFabricante.setText("");
         this.txtNome.setText("");
-
     }//GEN-LAST:event_btnNovo1ActionPerformed
 
     private void btnSalvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvar1ActionPerformed
         // botao salvar
         try {
-            Games obj = new Games();
+            Genero obj = new Genero();
 
             if(rbAcao.isSelected()){
                 obj.setGenero(rbAcao.getText());
@@ -675,6 +609,20 @@ public class Menu extends javax.swing.JFrame {
                 obj.setGenero(rbMOBA.getText());
             }
             //-------------------------------
+
+            //criar objeto tipo cliente DAO
+
+            GenerosDAO dao = new GenerosDAO();
+            dao.cadastrarGenero(obj);
+
+        } catch (Exception erro) {
+
+            JOptionPane.showMessageDialog(null,"Erro Genero" + erro);
+        }
+
+        try {
+            Plataforma obj = new Plataforma();
+
             if(cxPC.isSelected()){
                 obj.setPlataforma(cxPC.getText());
             }
@@ -691,27 +639,60 @@ public class Menu extends javax.swing.JFrame {
                 obj.setPlataforma(cxPS4Pro.getText());
             }
 
-            obj.setTamanho((float) Double.parseDouble(txtTamanho.getText()));
-            obj.setFabricante(txtFabricante.getText());
-            obj.setNome(txtNome.getText());
+            PlataformaDAO dao = new PlataformaDAO();
+            dao.cadastrarPlataforma(obj);
 
-            //criar objeto tipo cliente DAO
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(null,"Erro Plataforma" + erro);
+        }
+
+        try {
+            Games obj = new Games();
+
+            obj.setNome(txtNome.getText());
+            obj.setTamanho((float) Double.parseDouble(txtTamanho.getText()));
 
             GamesDAO dao = new GamesDAO();
             dao.cadastrarGames(obj);
 
-            JOptionPane.showMessageDialog(null,"Cadastrado com sucesso");
-
         } catch (Exception erro) {
 
-            JOptionPane.showMessageDialog(null,"Erro" + erro);
+            JOptionPane.showMessageDialog(null,"Erro  Games" + erro);
         }
 
+        try {
+            Fabricante obj = new Fabricante();
+            obj.setNome(txtFabricante.getText());
+
+            JOptionPane.showMessageDialog(null,"Cadastrado com sucesso");
+
+            FabricantesDAO dao = new FabricantesDAO();
+            dao.cadastrarFabricante(obj);
+
+        } catch (Exception erro) {
+            JOptionPane.showMessageDialog(null,"Erro Fabricante" + erro);
+        }
     }//GEN-LAST:event_btnSalvar1ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void cxPS4ProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cxPS4ProActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_cxPS4ProActionPerformed
+
+    private void cxXboxOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cxXboxOneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cxXboxOneActionPerformed
+
+    private void rbAventuraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbAventuraActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbAventuraActionPerformed
+
+    private void rbEstrategiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbEstrategiaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_rbEstrategiaActionPerformed
+
+    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -762,6 +743,9 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JCheckBox cxXboxOne;
     private javax.swing.JCheckBox cxXboxOneS;
     private javax.swing.JLabel idade;
+    private javax.swing.JDesktopPane jDesktopPane2;
+    private javax.swing.JDesktopPane jDesktopPane3;
+    private javax.swing.JDesktopPane jDesktopPane4;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
