@@ -33,11 +33,14 @@ public class GamesDAO {
     public void cadastrarGames(Games obj){
     
         try {
-            String cmdsql = "insert into games(nome,tamanho)values (?,?)";
+            String cmdsql = "insert into games(nome,genero,plataforma, tamanho, fabricante)values (?,?,?,?,?)";
             
             PreparedStatement stmt = conecta.prepareStatement(cmdsql);
             stmt.setString(1, obj.getNome());
-            stmt.setDouble(2,obj.getTamanho());
+            stmt.setString(2, obj.getGenero());
+            stmt.setString(3, obj.getPlataforma());
+            stmt.setDouble(4,obj.getTamanho());
+            stmt.setString(5, obj.getFabricante());
             
             
             
@@ -61,10 +64,42 @@ public class GamesDAO {
             
             List<Games> lista = new ArrayList<Games>();
             
-            String cmdsql = "select * from valores";
+            String cmdsql = "select * from games";
             
             PreparedStatement stmt = conecta.prepareStatement(cmdsql);
             
+            ResultSet rs = stmt.executeQuery();
+            
+            while(rs.next()){
+            
+                Games v = new Games();
+                v.setCodigo(rs.getInt("codigo"));
+                v.setNome(rs.getString("nome"));
+                v.setGenero(rs.getString("genero"));
+                v.setPlataforma(rs.getString("plataforma"));
+                v.setTamanho((float) rs.getDouble("tamanho"));
+                v.setFabricante(rs.getString("fabricante"));
+                
+                lista.add(v);
+            }
+            return lista;
+        } catch (Exception erro) {
+            throw new RuntimeException(erro);
+            
+        }
+    
+    
+    }
+    public List<Games> consultarGames(String desc){
+        
+        try {
+            
+            List<Games> lista = new ArrayList<Games>();
+            
+            String cmdsql = "select * from games where nome like ?";
+            
+            PreparedStatement stmt = conecta.prepareStatement(cmdsql);
+            stmt.setString(1,"%"+desc+"%");
             ResultSet rs = stmt.executeQuery();
             
             while(rs.next()){

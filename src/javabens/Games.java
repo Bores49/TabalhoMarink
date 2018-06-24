@@ -18,7 +18,8 @@ public class Games {
    private String nome;
    private String genero;
    private String plataforma;
-   private float tamanho;
+   private Double tamanho;
+   private String fabricante;
 
     public int getCodigo() {
         return codigo;
@@ -52,11 +53,11 @@ public class Games {
         this.plataforma = plataforma;
     }
 
-    public float getTamanho() {
+    public double getTamanho() {
         return tamanho;
     }
 
-    public void setTamanho(float tamanho) {
+    public void setTamanho(double tamanho) {
         this.tamanho = tamanho;
     }
 
@@ -67,6 +68,5 @@ public class Games {
     public void setFabricante(String fabricante) {
         this.fabricante = fabricante;
     }
-   private String fabricante;
-    
+
 }

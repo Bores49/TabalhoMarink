@@ -1,21 +1,16 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package connect_mysql;
 
+package connect_mysql;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
 /**
  *
- * @author nilce
+ * @author Camila e Luan
  */
 public class ConnectionFactory {
 
-    public Connection conecta() {
+    public  static Connection conecta() {
         try {
 
             return DriverManager.getConnection("jdbc:mysql://localhost/bdjogos", "root", "");

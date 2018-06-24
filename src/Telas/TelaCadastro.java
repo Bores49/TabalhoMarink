@@ -5,22 +5,23 @@
  */
 package Telas;
 
+
 import DAO.GamesDAO;
 import javabens.Games;
+
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author nilce
  */
-public class TelaCadastro extends javax.swing.JInternalFrame {
+public class TelaCadastro extends javax.swing.JFrame {
 
     /**
      * Creates new form TelaCadastro
      */
     public TelaCadastro() {
         initComponents();
-        
     }
 
     /**
@@ -32,18 +33,8 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        codigo = new javax.swing.JLabel();
-        txtCodigo = new javax.swing.JTextField();
-        btnNovo = new javax.swing.JButton();
-        btnSalvar = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
-        jPanel1 = new javax.swing.JPanel();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
+        jPanel3 = new javax.swing.JPanel();
         rbRPG = new javax.swing.JRadioButton();
         rbMOBA = new javax.swing.JRadioButton();
         rbMMORPG = new javax.swing.JRadioButton();
@@ -52,85 +43,62 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
         rbCorrida = new javax.swing.JRadioButton();
         rbAcao = new javax.swing.JRadioButton();
         rbEsportes = new javax.swing.JRadioButton();
-        jPanel2 = new javax.swing.JPanel();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
         cxPC = new javax.swing.JCheckBox();
         cxXboxOne = new javax.swing.JCheckBox();
         cxXboxOneS = new javax.swing.JCheckBox();
         cxPS4 = new javax.swing.JCheckBox();
         cxPS4Pro = new javax.swing.JCheckBox();
-        txtTamanho = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        txtCodigo1 = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
         txtFabricante = new javax.swing.JTextField();
+        btnSalvar1 = new javax.swing.JButton();
+        txtTamanho = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        btnNovo1 = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        codigo1 = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setClosable(true);
-        setTitle("Cadastro");
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        codigo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        codigo.setText("Codigo:");
+        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
 
-        txtCodigo.setEditable(false);
-        txtCodigo.setText("*********");
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setForeground(new java.awt.Color(204, 204, 204));
 
-        btnNovo.setBackground(new java.awt.Color(153, 153, 153));
-        btnNovo.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnNovo.setText("Novo");
-        btnNovo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNovoActionPerformed(evt);
-            }
-        });
-
-        btnSalvar.setBackground(new java.awt.Color(153, 153, 153));
-        btnSalvar.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        btnSalvar.setText("Salvar");
-        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSalvarActionPerformed(evt);
-            }
-        });
-
-        jLabel2.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
-        jLabel2.setText("Cadastro de Games");
-
-        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel1.setText("Nome:");
-
-        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel3.setText("Genero:");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel4.setText("Plataforma:");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel5.setText("Tamanho:");
-
-        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        jLabel6.setText("Fabricante:");
-
-        txtNome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        txtNome.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomeActionPerformed(evt);
-            }
-        });
-
-        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.setForeground(new java.awt.Color(204, 204, 204));
-
-        rbRPG.setBackground(new java.awt.Color(204, 204, 204));
+        rbRPG.setBackground(new java.awt.Color(255, 255, 255));
         rbRPG.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbRPG.setText("RPG");
+        rbRPG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbRPGActionPerformed(evt);
+            }
+        });
 
-        rbMOBA.setBackground(new java.awt.Color(204, 204, 204));
+        rbMOBA.setBackground(new java.awt.Color(255, 255, 255));
         rbMOBA.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbMOBA.setText("MOBA");
+        rbMOBA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbMOBAActionPerformed(evt);
+            }
+        });
 
-        rbMMORPG.setBackground(new java.awt.Color(204, 204, 204));
+        rbMMORPG.setBackground(new java.awt.Color(255, 255, 255));
         rbMMORPG.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbMMORPG.setText("MMORPG");
+        rbMMORPG.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbMMORPGActionPerformed(evt);
+            }
+        });
 
-        rbEstrategia.setBackground(new java.awt.Color(204, 204, 204));
+        rbEstrategia.setBackground(new java.awt.Color(255, 255, 255));
         rbEstrategia.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbEstrategia.setText("Estrategia");
         rbEstrategia.addActionListener(new java.awt.event.ActionListener() {
@@ -139,7 +107,7 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        rbAventura.setBackground(new java.awt.Color(204, 204, 204));
+        rbAventura.setBackground(new java.awt.Color(255, 255, 255));
         rbAventura.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbAventura.setText("Aventura");
         rbAventura.addActionListener(new java.awt.event.ActionListener() {
@@ -148,26 +116,41 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        rbCorrida.setBackground(new java.awt.Color(204, 204, 204));
+        rbCorrida.setBackground(new java.awt.Color(255, 255, 255));
         rbCorrida.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbCorrida.setText("Corrida");
+        rbCorrida.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbCorridaActionPerformed(evt);
+            }
+        });
 
-        rbAcao.setBackground(new java.awt.Color(204, 204, 204));
+        rbAcao.setBackground(new java.awt.Color(255, 255, 255));
         rbAcao.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbAcao.setText("Ação");
+        rbAcao.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbAcaoActionPerformed(evt);
+            }
+        });
 
-        rbEsportes.setBackground(new java.awt.Color(204, 204, 204));
+        rbEsportes.setBackground(new java.awt.Color(255, 255, 255));
         rbEsportes.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         rbEsportes.setText("Esporte");
+        rbEsportes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                rbEsportesActionPerformed(evt);
+            }
+        });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(rbAcao)
                         .addGap(27, 27, 27)
                         .addComponent(rbAventura)
@@ -175,7 +158,7 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
                         .addComponent(rbEstrategia)
                         .addGap(17, 17, 17)
                         .addComponent(rbRPG))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(rbEsportes)
                         .addGap(27, 27, 27)
                         .addComponent(rbCorrida)
@@ -185,17 +168,17 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
                         .addComponent(rbMOBA)))
                 .addContainerGap(72, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbAcao)
                     .addComponent(rbAventura)
                     .addComponent(rbEstrategia)
                     .addComponent(rbRPG))
                 .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(rbEsportes)
                     .addComponent(rbCorrida)
                     .addComponent(rbMMORPG)
@@ -203,14 +186,21 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        jPanel2.setBackground(new java.awt.Color(204, 204, 204));
-        jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel5.setText("Plataforma:");
 
-        cxPC.setBackground(new java.awt.Color(204, 204, 204));
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
+
+        cxPC.setBackground(new java.awt.Color(255, 255, 255));
         cxPC.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cxPC.setText("PC");
+        cxPC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cxPCActionPerformed(evt);
+            }
+        });
 
-        cxXboxOne.setBackground(new java.awt.Color(204, 204, 204));
+        cxXboxOne.setBackground(new java.awt.Color(255, 255, 255));
         cxXboxOne.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cxXboxOne.setText("Xbox One");
         cxXboxOne.addActionListener(new java.awt.event.ActionListener() {
@@ -219,15 +209,25 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        cxXboxOneS.setBackground(new java.awt.Color(204, 204, 204));
+        cxXboxOneS.setBackground(new java.awt.Color(255, 255, 255));
         cxXboxOneS.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
-        cxXboxOneS.setText("Xbox one S");
+        cxXboxOneS.setText("Xbox one X");
+        cxXboxOneS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cxXboxOneSActionPerformed(evt);
+            }
+        });
 
-        cxPS4.setBackground(new java.awt.Color(204, 204, 204));
+        cxPS4.setBackground(new java.awt.Color(255, 255, 255));
         cxPS4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cxPS4.setText("PS4");
+        cxPS4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cxPS4ActionPerformed(evt);
+            }
+        });
 
-        cxPS4Pro.setBackground(new java.awt.Color(204, 204, 204));
+        cxPS4Pro.setBackground(new java.awt.Color(255, 255, 255));
         cxPS4Pro.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         cxPS4Pro.setText("PS4 Pro");
         cxPS4Pro.addActionListener(new java.awt.event.ActionListener() {
@@ -236,11 +236,11 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(18, 18, 18)
                 .addComponent(cxPC)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -253,11 +253,11 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
                 .addComponent(cxPS4Pro)
                 .addGap(56, 56, 56))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(23, 23, 23)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cxPC)
                     .addComponent(cxXboxOne)
                     .addComponent(cxXboxOneS)
@@ -266,165 +266,380 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
                 .addContainerGap(16, Short.MAX_VALUE))
         );
 
-        txtTamanho.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
+        jLabel8.setText("Cadastro de Games");
+
+        txtCodigo1.setEditable(false);
+        txtCodigo1.setText("*********");
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel10.setText("GB");
 
         txtFabricante.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtFabricante.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtFabricanteActionPerformed(evt);
+            }
+        });
+
+        btnSalvar1.setBackground(new java.awt.Color(153, 153, 153));
+        btnSalvar1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnSalvar1.setText("Salvar");
+        btnSalvar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvar1ActionPerformed(evt);
+            }
+        });
+
+        txtTamanho.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel6.setText("Tamanho:");
+
+        btnNovo1.setBackground(new java.awt.Color(153, 153, 153));
+        btnNovo1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        btnNovo1.setText("Novo");
+        btnNovo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNovo1ActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel7.setText("Fabricante:");
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel4.setText("Genero:");
+
+        codigo1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        codigo1.setText("Codigo:");
+
+        txtNome.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        txtNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomeActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jLabel3.setText("Nome:");
+
+        jDesktopPane1.setLayer(jPanel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel5, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jPanel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel8, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(txtCodigo1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel10, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(txtFabricante, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(btnSalvar1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(txtTamanho, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel6, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(btnNovo1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(codigo1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(txtNome, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jDesktopPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(jLabel8))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(codigo1)
+                        .addGap(26, 26, 26)
+                        .addComponent(txtCodigo1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel3))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel4))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel5))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel6)
+                        .addGap(10, 10, 10)
+                        .addComponent(txtTamanho, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(4, 4, 4)
+                        .addComponent(jLabel10))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(33, 33, 33)
+                        .addComponent(jLabel7)
+                        .addGap(3, 3, 3)
+                        .addComponent(txtFabricante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(183, 183, 183)
+                        .addComponent(btnSalvar1)
+                        .addGap(35, 35, 35)
+                        .addComponent(btnNovo1)))
+                .addContainerGap(16, Short.MAX_VALUE))
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
+                .addComponent(jLabel8)
+                .addGap(28, 28, 28)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(codigo1)
+                    .addComponent(txtCodigo1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addComponent(jLabel3)
+                .addGap(3, 3, 3)
+                .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel4)
+                .addGap(2, 2, 2)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(17, 17, 17)
+                .addComponent(jLabel5)
+                .addGap(3, 3, 3)
+                .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(36, 36, 36)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel6)
+                    .addComponent(txtTamanho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                        .addGap(3, 3, 3)
+                        .addComponent(jLabel10)))
+                .addGap(7, 7, 7)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addComponent(txtFabricante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addGroup(jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSalvar1)
+                    .addComponent(btnNovo1))
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(141, 141, 141)
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(codigo)
-                        .addGap(26, 26, 26)
-                        .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel5)
-                        .addGap(10, 10, 10)
-                        .addComponent(txtTamanho, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jLabel6)
-                        .addGap(3, 3, 3)
-                        .addComponent(txtFabricante, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(180, 180, 180)
-                        .addComponent(btnSalvar)
-                        .addGap(35, 35, 35)
-                        .addComponent(btnNovo)))
-                .addContainerGap(24, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(11, 11, 11)
-                .addComponent(jLabel2)
-                .addGap(24, 24, 24)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(codigo)
-                    .addComponent(txtCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1)
-                .addGap(3, 3, 3)
-                .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(17, 17, 17)
-                .addComponent(jLabel3)
-                .addGap(2, 2, 2)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addGap(3, 3, 3)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(txtTamanho, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(7, 7, 7)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel6)
-                    .addComponent(txtFabricante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(47, 47, 47)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSalvar)
-                    .addComponent(btnNovo))
-                .addContainerGap(31, Short.MAX_VALUE))
+            .addComponent(jDesktopPane1)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+    private void rbRPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbRPGActionPerformed
+        rbAventura.setSelected(false);
+        rbCorrida.setSelected(false);
+        rbEsportes.setSelected(false);
+        rbEstrategia.setSelected(false);
+        rbMMORPG.setSelected(false);
+        rbMOBA.setSelected(false);
+
+        rbAcao.setSelected(false);
+    }//GEN-LAST:event_rbRPGActionPerformed
+
+    private void rbMOBAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbMOBAActionPerformed
+        rbAventura.setSelected(false);
+        rbCorrida.setSelected(false);
+        rbEsportes.setSelected(false);
+        rbEstrategia.setSelected(false);
+        rbMMORPG.setSelected(false);
+
+        rbRPG.setSelected(false);
+        rbAcao.setSelected(false);
+    }//GEN-LAST:event_rbMOBAActionPerformed
+
+    private void rbMMORPGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbMMORPGActionPerformed
+        rbAventura.setSelected(false);
+        rbCorrida.setSelected(false);
+        rbEsportes.setSelected(false);
+        rbEstrategia.setSelected(false);
+
+        rbMOBA.setSelected(false);
+        rbRPG.setSelected(false);
+        rbAcao.setSelected(false);
+    }//GEN-LAST:event_rbMMORPGActionPerformed
+
+    private void rbEstrategiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbEstrategiaActionPerformed
+        rbAventura.setSelected(false);
+        rbCorrida.setSelected(false);
+        rbEsportes.setSelected(false);
+
+        rbMMORPG.setSelected(false);
+        rbMOBA.setSelected(false);
+        rbRPG.setSelected(false);
+        rbAcao.setSelected(false);
+    }//GEN-LAST:event_rbEstrategiaActionPerformed
+
+    private void rbAventuraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbAventuraActionPerformed
+
+        rbCorrida.setSelected(false);
+        rbEsportes.setSelected(false);
+        rbEstrategia.setSelected(false);
+        rbMMORPG.setSelected(false);
+        rbMOBA.setSelected(false);
+        rbRPG.setSelected(false);
+        rbAcao.setSelected(false);
+    }//GEN-LAST:event_rbAventuraActionPerformed
+
+    private void rbCorridaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbCorridaActionPerformed
+        rbAventura.setSelected(false);
+
+        rbEsportes.setSelected(false);
+        rbEstrategia.setSelected(false);
+        rbMMORPG.setSelected(false);
+        rbMOBA.setSelected(false);
+        rbRPG.setSelected(false);
+        rbAcao.setSelected(false);
+    }//GEN-LAST:event_rbCorridaActionPerformed
+
+    private void rbAcaoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbAcaoActionPerformed
+        // TODO add your handling code here:
+        rbAventura.setSelected(false);
+        rbCorrida.setSelected(false);
+        rbEsportes.setSelected(false);
+        rbEstrategia.setSelected(false);
+        rbMMORPG.setSelected(false);
+        rbMOBA.setSelected(false);
+        rbRPG.setSelected(false);
+    }//GEN-LAST:event_rbAcaoActionPerformed
+
+    private void rbEsportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbEsportesActionPerformed
+        rbAventura.setSelected(false);
+        rbCorrida.setSelected(false);
+
+        rbEstrategia.setSelected(false);
+        rbMMORPG.setSelected(false);
+        rbMOBA.setSelected(false);
+        rbRPG.setSelected(false);
+        rbAcao.setSelected(false);
+    }//GEN-LAST:event_rbEsportesActionPerformed
+
+    private void cxPCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cxPCActionPerformed
+
+        cxPS4.setSelected(false);
+        cxPS4Pro.setSelected(false);
+        cxXboxOneS.setSelected(false);
+        cxXboxOne.setSelected(false);
+    }//GEN-LAST:event_cxPCActionPerformed
+
+    private void cxXboxOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cxXboxOneActionPerformed
+        cxPC.setSelected(false);
+        cxPS4.setSelected(false);
+        cxPS4Pro.setSelected(false);
+        cxXboxOneS.setSelected(false);
+    }//GEN-LAST:event_cxXboxOneActionPerformed
+
+    private void cxXboxOneSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cxXboxOneSActionPerformed
+        cxPC.setSelected(false);
+        cxPS4.setSelected(false);
+        cxPS4Pro.setSelected(false);
+
+        cxXboxOne.setSelected(false);
+    }//GEN-LAST:event_cxXboxOneSActionPerformed
+
+    private void cxPS4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cxPS4ActionPerformed
+        cxPC.setSelected(false);
+
+        cxPS4Pro.setSelected(false);
+        cxXboxOneS.setSelected(false);
+        cxXboxOne.setSelected(false);
+    }//GEN-LAST:event_cxPS4ActionPerformed
+
+    private void cxPS4ProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cxPS4ProActionPerformed
+        cxPC.setSelected(false);
+        cxPS4.setSelected(false);
+
+        cxXboxOneS.setSelected(false);
+        cxXboxOne.setSelected(false);
+    }//GEN-LAST:event_cxPS4ProActionPerformed
+
+    private void btnSalvar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvar1ActionPerformed
         // botao salvar
         try {
+            
             Games obj = new Games();
-            
-        if(rbAcao.isSelected()){
-            obj.setGenero(rbAcao.getText());
-        }
-        if(rbAventura.isSelected()){
-            obj.setGenero(rbAventura.getText());
-        }
-        if(rbEstrategia.isSelected()){
-            obj.setGenero(rbEstrategia.getText());
-        }
-        if(rbRPG.isSelected()){
-            obj.setGenero(rbRPG.getText());
-        }
-        if(rbEsportes.isSelected()){
-            obj.setGenero(rbEsportes.getText());
-        }
-        if(rbCorrida.isSelected()){
-            obj.setGenero(rbCorrida.getText());
-        }
-        if(rbMMORPG.isSelected()){
-            obj.setGenero(rbMMORPG.getText());
-        }
-        if(rbMOBA.isSelected()){
-            obj.setGenero(rbMOBA.getText());
-        }
-        //-------------------------------
-        if(cxPC.isSelected()){
-            obj.setPlataforma(cxPC.getText());
-        }
-        if(cxXboxOne.isSelected()){
-            obj.setPlataforma(cxXboxOne.getText());
-        }
-        if(cxXboxOneS.isSelected()){
-            obj.setPlataforma(cxXboxOneS.getText());
-        }
-        if(cxPS4.isSelected()){
-            obj.setPlataforma(cxPS4.getText());
-        }
-        if(cxPS4Pro.isSelected()){
-            obj.setPlataforma(cxPS4Pro.getText());
-        }
-        
-        obj.setTamanho((float) Double.parseDouble(txtTamanho.getText()));
-        obj.setFabricante(txtFabricante.getText());
-        obj.setNome(txtNome.getText());
-        
-        //criar objeto tipo cliente DAO
-        
-        GamesDAO dao = new GamesDAO();
-        dao.cadastrarGames(obj);
-        
-        JOptionPane.showMessageDialog(null,"Cadastrado com sucesso");
-        
-        } catch (Exception erro) {
-            
-            JOptionPane.showMessageDialog(null,"Erro" + erro);
-        }
-        
-        
-        
-    }//GEN-LAST:event_btnSalvarActionPerformed
+            obj.setNome(txtNome.getText());
+            if(rbAcao.isSelected()){
+                obj.setGenero(rbAcao.getText());
+            }
+            if(rbAventura.isSelected()){
+                obj.setGenero(rbAventura.getText());
+            }
+            if(rbEstrategia.isSelected()){
+                obj.setGenero(rbEstrategia.getText());
+            }
+            if(rbRPG.isSelected()){
+                obj.setGenero(rbRPG.getText());
+            }
+            if(rbEsportes.isSelected()){
+                obj.setGenero(rbEsportes.getText());
+            }
+            if(rbCorrida.isSelected()){
+                obj.setGenero(rbCorrida.getText());
+            }
+            if(rbMMORPG.isSelected()){
+                obj.setGenero(rbMMORPG.getText());
+            }
+            if(rbMOBA.isSelected()){
+                obj.setGenero(rbMOBA.getText());
+            }
+            //-------------------------------
+                if(cxPC.isSelected()){
+                obj.setPlataforma(cxPC.getText());
+            }
+            if(cxXboxOne.isSelected()){
+                obj.setPlataforma(cxXboxOne.getText());
+            }
+            if(cxXboxOneS.isSelected()){
+                obj.setPlataforma(cxXboxOneS.getText());
+            }
+            if(cxPS4.isSelected()){
+                obj.setPlataforma(cxPS4.getText());
+            }
+            if(cxPS4Pro.isSelected()){
+                obj.setPlataforma(cxPS4Pro.getText());
+            }
+            //criar objeto tipo cliente DAO
 
-    private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
+            
+            obj.setTamanho((float) Double.parseDouble(txtTamanho.getText()));
+            obj.setFabricante(txtFabricante.getText());
+
+            GamesDAO dao = new GamesDAO();
+            dao.cadastrarGames(obj);
+            
+            JOptionPane.showMessageDialog(null,"Cadastrado com sucesso" );
+        } catch (Exception erro) {
+
+            JOptionPane.showMessageDialog(null,"Erro Genero" + erro);
+        }
+
+        
+
+        
+    }//GEN-LAST:event_btnSalvar1ActionPerformed
+
+    private void btnNovo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovo1ActionPerformed
         // botao novo
         this.rbAcao.setSelected(false);
         this.rbAventura.setSelected(false);
@@ -434,60 +649,80 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
         this.rbEstrategia.setSelected(false);
         this.rbMMORPG.setSelected(false);
         this.rbMOBA.setSelected(false);
-        
-        
-        
+
         this.cxPC.setSelected(false);
         this.cxXboxOne.setSelected(false);
         this.cxXboxOneS.setSelected(false);
         this.cxPS4.setSelected(false);
         this.cxPS4Pro.setSelected(false);
-        
-        
+
         this.txtTamanho.setText("");
         this.txtFabricante.setText("");
         this.txtNome.setText("");
-        
-    }//GEN-LAST:event_btnNovoActionPerformed
+    }//GEN-LAST:event_btnNovo1ActionPerformed
 
     private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNomeActionPerformed
 
-    private void cxXboxOneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cxXboxOneActionPerformed
+    private void txtFabricanteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtFabricanteActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_cxXboxOneActionPerformed
+    }//GEN-LAST:event_txtFabricanteActionPerformed
 
-    private void cxPS4ProActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cxPS4ProActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cxPS4ProActionPerformed
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(TelaCadastro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
-    private void rbAventuraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbAventuraActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbAventuraActionPerformed
-
-    private void rbEstrategiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rbEstrategiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rbEstrategiaActionPerformed
-
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new TelaCadastro().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnNovo;
-    private javax.swing.JButton btnSalvar;
-    private javax.swing.JLabel codigo;
+    private javax.swing.JButton btnNovo1;
+    private javax.swing.JButton btnSalvar1;
+    private javax.swing.JLabel codigo1;
     private javax.swing.JCheckBox cxPC;
     private javax.swing.JCheckBox cxPS4;
     private javax.swing.JCheckBox cxPS4Pro;
     private javax.swing.JCheckBox cxXboxOne;
     private javax.swing.JCheckBox cxXboxOneS;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     private javax.swing.JRadioButton rbAcao;
     private javax.swing.JRadioButton rbAventura;
     private javax.swing.JRadioButton rbCorrida;
@@ -496,7 +731,7 @@ public class TelaCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JRadioButton rbMMORPG;
     private javax.swing.JRadioButton rbMOBA;
     private javax.swing.JRadioButton rbRPG;
-    private javax.swing.JTextField txtCodigo;
+    private javax.swing.JTextField txtCodigo1;
     private javax.swing.JTextField txtFabricante;
     private javax.swing.JTextField txtNome;
     private javax.swing.JTextField txtTamanho;
